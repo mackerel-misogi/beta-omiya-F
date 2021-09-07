@@ -529,15 +529,9 @@ hr .line{
 }
 
 .school-about{
-  color: #797979;
   display: flex;
-}
-
-.left{
-	width: 300px;
-}
-.contents{
-	flex: 1;
+  color: #797979;
+    justify-content: center;
 }
 
 
