@@ -526,4 +526,14 @@ button {
   text-align: left;
   text-color: #797979;
 }
+
+.school-about{
+	display: flex;
+}
+.left{
+	width: 300px;
+}
+.contents{
+	flex: 1;
+}
 /*# sourceMappingURL=style.css.map */
