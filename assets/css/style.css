@@ -383,7 +383,7 @@ button {
 }
 
 .header__logo {
-  width: 330px;
+  width: auto;
   height: auto;
 }
 
