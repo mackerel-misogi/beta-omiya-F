@@ -518,12 +518,14 @@ button {
 	line-height: 1.25;
 	text-align: center;
 	padding:9px 20px;
+	color: #FFFFFF;
 	background-color: #FFCCCC;
-	margin: 20 -30px;
+	margin: 0 -50px;
 }
 
-.line{
-	margin: 0 -30px;
+hr .line{
+	margin: 20 -30px;
+	color: #797979;
 }
 
 .school-about{
