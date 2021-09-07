@@ -524,8 +524,8 @@ button {
 }
 
 hr .line{
-	margin: 20 -30px;
-	color: #797979;
+	margin: 20px -50px;
+	border-top: 2px solid #797979;
 }
 
 .school-about{
