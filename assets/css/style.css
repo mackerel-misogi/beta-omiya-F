@@ -514,14 +514,18 @@ button {
 * school
 **********************/
 .school-title{
-  front-size: 24px;
-  line-height: 1.75;
-  text-align: center;
-  color: #ffffff;
-  padding:9px 20px;
-  background-color: #cc99a2;
-  margin: 0 -20px 20px -20px;
+	front-size: 24px;
+	line-height: 1.25;
+	text:align: center;
+	padding:9px 20px;
+	background-color: #FFCCCC;
+	margin: 20 -30px;
 }
+
+.line{
+	margin: 0 -30px;
+}
+
 .school-about{
   color: #797979;
 }
