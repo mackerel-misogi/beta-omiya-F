@@ -516,7 +516,7 @@ button {
 .school-title{
 	front-size: 24px;
 	line-height: 1.25;
-	text:align: center;
+	text-align: center;
 	padding:9px 20px;
 	background-color: #FFCCCC;
 	margin: 20 -30px;
@@ -528,11 +528,9 @@ button {
 
 .school-about{
   color: #797979;
+  display: flex;
 }
 
-.school-about{
-	display: flex;
-}
 .left{
 	width: 300px;
 }
