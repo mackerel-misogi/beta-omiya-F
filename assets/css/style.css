@@ -509,43 +509,4 @@ button {
 .hidden {
   display: none;
 }
-
-/*********************
-* school
-**********************/
-.school-title{
-	front-size: 24px;
-	line-height: 1.25;
-	text-align: center;
-	padding:9px 20px;
-	color: #FFFFFF;
-	background-color: #FFCCCC;
-	margin: 0 -50px;
-}
-
-.school-title02{
-	front-size: 24px;
-	line-height: 1.25;
-	text-align: center;
-	padding:9px 20px;
-	color: #FFFFFF;
-	background-color: #d2b48c;
-	margin: 0 -50px;
-}
-
-hr .line{
-	margin: 20px -50px;
-	border-top: 2px solid #797979;
-}
-
-.school-about{
-  display: flex;
-  color: #797979;
-    justify-content: center;
-}
-
-
-.contents img{
-	width: 200px;
-}
 /*# sourceMappingURL=style.css.map */
