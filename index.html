@@ -22,48 +22,46 @@
   </header>
   <main class="main index-page">
     <!-- タイトルエリア　ここから -->
-    <h1 class="main-title"><img src="assets/images/header01.png" alt="Presented by SCRAP×N・S高リアル脱出ゲーム制作PJ 真夏の小學校からの脱出"></h1>
-    <hr class="line">
-    <section class="section-school">
-      <div class="school">
-        
+    <div class="container">
+      <div class="greeting">
+          <h1>こんにちは！</h1>
+        <p class="left">僕たちはN高等学校の生徒です。<br>
+        今日は、みんなにこのサイトを使った<br>
+        <p class="bold">謎解きゲーム<br></p>
+        にチャレンジしてもらうよ！</p>
       </div>
-      <div class="container">
-        <section class="greeting">
-          <h1>こんにちは</h1>
-          <p class="left">僕たちはN高等学校の生徒です<br>
-            今日は、みんなにこのサイトを使った<br>
-            <p class="bold">謎解きゲーム<br></p>
-            にチャレンジしてもらうよ！</p>
-        </section>
+    </div>
+    <div class="container">
+      <div class="student">
+        <h1>先生の紹介</h1>
+        <p class="left">〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br>
+        〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br>
+        〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br></p>
+        <div class="student-image"><img src="assets/images/student.png" alt="生徒紹介"></div>
       </div>
-    </section>
-    <section class="section-school">
-      <div class="container">
-        <div class="school-title02">
-          <h1>先生の紹介</h1>
-        </div>
-        <div class="school-about">
-          <p class="left">〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br>
-            〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br>
-            〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br>
-            〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br>
-            〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜</p>
-        </div>
+    </div>
+    <div class="container">
+      <div class="quiz">
+        <h1>まずはこの問題を解いてみよう！</h1>
+        <div class="quiz-image"><img src="assets/images/quiz-image01.png" alt="クイズ画像"></div>
       </div>
-    </seciton>
+    </div>
+    <div class="container">
+      <h2 class="section-title"><span class="section-title__stage">練習問題</span>キーワードを入力</h2>
+      <answer-input v-bind:correct="correctAnswer['stage00']['q0']" v-on:answer-input="answerInput($event, 'stage00',  1)"></answer-input>
+    </div>
     <section class="section">
       <div class="container">
         <a class="btn" href="story.html">次のページ</a>
       </div>
     </section>
   </main>
+  </div>
   <footer class="footer section bg-color--gray">
     <div class="container">
       <p class="text-center">授業主催： N・S高<br>協力：株式会社SCRAP<br>企画制作：N・S高生</p>
       <p class="text-center">「リアル脱出ゲーム」は株式会社SCRAPの登録商標です。</p>
       <p class="text-center">株式会社SCRAPとN・S高で実施した授業「リアル脱出ゲームの作り方」の一環で<br>生徒が制作したものであり、SCRAPが主催/公認するものではありません。</p>
-    </div>
   </footer>
 </body>
 </html>
