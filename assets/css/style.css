@@ -382,6 +382,10 @@ button {
   height: 100%;
 }
 
+.header__logo01 {
+  text-align: center;
+}
+
 .header__logo {
   width: 300px;
   height: auto;
