@@ -510,3 +510,11 @@ button {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+/********************
+* quiz-site
+********************/
+.greeting {
+  text-align: center;
+}
