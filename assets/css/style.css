@@ -366,7 +366,7 @@ button {
 *****************/
 .header {
   background-color: #fff;
-  height: 60px;
+  height: 200px;
 }
 
 .header .container {
@@ -384,6 +384,7 @@ button {
 
 .header__logo01 {
   text-align: center;
+  margin: 0 40px;
 }
 
 .header__logo {
