@@ -26,7 +26,7 @@ body {
   list-style: none;
   color: #000;
   margin: 0;
-  background: linear-gradient(90deg, #ffdead 10%, #FFF 10%, #FFF 90%, #ffdead 90%, #ffdead 100%);
+  background: "FFF;
 }
 
 img {
@@ -366,7 +366,7 @@ button {
 * header
 *****************/
 .header {
-  background: linear-gradient(90deg, #ffdead 10%, #FFF 10%, #FFF 90%, #ffdead 90%, #ffdead 100%);
+  background: #FFF;
   height: 400px;
 }
 
@@ -521,14 +521,17 @@ button {
 /********************
 * quiz-site
 ********************/
+
 .container .greeting{
 	padding: 70px 0;
 }
 
 .greeting {
 	text-align: center;
-	margin: 40px 0;
-	border-top: solid 3px #696969;
+}
+
+.normal{
+  font-weight: 200;
 }
 
 .bold{
