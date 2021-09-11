@@ -24,19 +24,19 @@
     <!-- タイトルエリア　ここから -->
     <div class="container">
       <div class="greeting">
-          <h1>こんにちは！</h1>
-        <p class="left">僕たちはN高等学校の生徒です。<br>
+        <p class="normal">こんにちは！<br>
+        僕たちはN高等学校の生徒です。<br>
         今日は、みんなにこのサイトを使った<br>
         <p class="bold">謎解きゲーム<br></p>
-        にチャレンジしてもらうよ！</p>
+        <p class="normal">にチャレンジしてもらうよ！</p>
       </div>
     </div>
     <div class="container">
       <div class="student">
         <h1>先生の紹介</h1>
-        <p class="left">〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br>
-        〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br>
-        〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br></p>
+        <p class="left">〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br>
+        〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br>
+        〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br></p>
         <div class="student-image"><img src="assets/images/student.png" alt="生徒紹介"></div>
       </div>
     </div>
@@ -47,8 +47,7 @@
       </div>
     </div>
     <div class="container">
-      <h2 class="section-title"><span class="section-title__stage">練習問題</span>キーワードを入力</h2>
-      <answer-input v-bind:correct="correctAnswer['stage00']['q0']" v-on:answer-input="answerInput($event, 'stage00',  1)"></answer-input>
+      <answer-input v-bind:correct="correctAnswer['stage1']['q1']" v-on:answer-input="answerInput($event, 'stage1', 1)"></answer-input>   
     </div>
     <section class="section">
       <div class="container">
@@ -63,5 +62,7 @@
       <p class="text-center">「リアル脱出ゲーム」は株式会社SCRAPの登録商標です。</p>
       <p class="text-center">株式会社SCRAPとN・S高で実施した授業「リアル脱出ゲームの作り方」の一環で<br>生徒が制作したものであり、SCRAPが主催/公認するものではありません。</p>
   </footer>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
