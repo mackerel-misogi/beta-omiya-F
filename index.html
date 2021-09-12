@@ -17,11 +17,14 @@
   </svg>
   <header class="header">
     <div class="container">
+      <!-- タイトルエリア ここから-->
       <div class="header__logo01"><img src="assets/images/top-image.png" alt="みんなで特別授業"></div>
+      <!-- タイトルエリア ここまで-->
     </div>
   </header>
   <main class="main index-page">
-    <!-- タイトルエリア　ここから -->
+  <div id="stage">
+    <div id="sectionStage1" class="stage">
     <div class="container">
       <div class="greeting">
         <p class="normal">こんにちは！<br>
@@ -33,11 +36,10 @@
     </div>
     <div class="container">
       <div class="student">
-        <h1>先生の紹介</h1>
-        <p class="left">〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br>
-        〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br>
-        〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜<br></p>
-        <div class="student-image"><img src="assets/images/student.png" alt="生徒紹介"></div>
+        <h1 class="student-title">先生の紹介</h1>
+        <div class="student-illust name01"><img src="assets/images/illust01.png" alt="生徒画像"></div>
+        <div class="student-illust name02"><img src="assets/images/illust02.png" alt="生徒画像"></div>
+        <div class="student-illust name03"><img src="assets/images/illust03.png" alt="生徒画像"></div>
       </div>
     </div>
     <div class="container">
@@ -46,14 +48,25 @@
         <div class="quiz-image"><img src="assets/images/quiz-image01.png" alt="クイズ画像"></div>
       </div>
     </div>
+    <!-- STAGE1回答入力セクション ここから-->
     <div class="container">
-      <answer-input v-bind:correct="correctAnswer['stage1']['q1']" v-on:answer-input="answerInput($event, 'stage1', 1)"></answer-input>   
+      <answer-input class=" inputAnswer" v-bind:correct="correctAnswer['stage1']['q1']" v-on:answer-input="answerInput($event, 'stage1', 1)"></answer-input>   
     </div>
-    <section class="section">
+    <!-- STAGE1回答入力セクション ここまで-->
+
+    <!-- STAGE1クリア画面 ここから-->
+    <section v-if="clear['stage1']" v-bind:class="{isClear:clear['stage1']}"  class="section section--clear bg-color--gray">
       <div class="container">
-        <a class="btn" href="story.html">次のページ</a>
+        <div class="clear-message">
+          <div class="clear-message__title">正解！</div>
+          <div class="clear-message__content">次の問題も解いてみよう！</div>
+          <a class="clear-message__btn btn" href="story.html">次のページへ<svg class="btn__arrow"></svg></a>
+        </div>
       </div>
     </section>
+    <!-- STAGE1クリア画面 ここまで-->
+    </div>
+  </div>
   </main>
   </div>
   <footer class="footer section bg-color--gray">
