@@ -18,7 +18,7 @@ const app = Vue.createApp({
       */
       correctAnswer: {
         stage1: {
-          q1: 'あああ',
+          q1: 'きく',
         },
         stage2: {
           q1: 'いいい',
@@ -108,11 +108,9 @@ app.component('answer-input', {
   template: `
     <div class="answer__container">
       <div class="answer">
-        <input type="text" v-model="inputAnswer" placeholder="メッセージを送信">
+        <input type="text" v-model="inputAnswer" placeholder="答えを入力してね">
       </div>
-      <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
       <button v-on:click="judgement(inputAnswer)">送信</button>
-      <p v-if="message === okMessage" class="err-message">{{ message }}</p>
     </div>`,
   methods: {
     judgement(answer) {
