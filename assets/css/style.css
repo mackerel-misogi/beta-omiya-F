@@ -50,7 +50,6 @@ figcaption {
 
 input[type=text] {
   font-size: 18px;
-  border: none;
   padding: 25px 35px;
   display: block;
   margin: 0 auto;
@@ -79,10 +78,13 @@ button {
   display: block;
   border: none;
   margin: 0 auto;
-  background-color: #006837;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #d6d6d6;
   color: #fff;
-  width: 287px;
+  width: 250px;
   height: 55px;
+  font-size: 18px;
 }
 
 /*******************
@@ -385,7 +387,8 @@ button {
 
 .header__logo01 {
   text-align: center;
-  width:500px;
+  margin: 50px 300px 0 300px;
+  border-bottom: solid 3px #696969;
 }
 
 .header__logo {
@@ -459,7 +462,7 @@ button {
 }
 
 .clear-message {
-  background-color: #d9e021;
+  background-color: #FFF;
   padding: 30px 30px 60px;
   position: relative;
 }
@@ -480,7 +483,7 @@ button {
   display: block;
   width: 183px;
   height: 2px;
-  background-color: #fff;
+  background-color: #000;
   bottom: 0;
   left: calc(50% - (183px/2));
 }
@@ -500,6 +503,7 @@ button {
 /********************
 * Utility
 ********************/
+
 .text-center {
   text-align: center;
 }
@@ -539,10 +543,41 @@ button {
 }
 .student{
 	text-align: center;
-	margin: 40px 0;
+	margin: 40px 0 100px;
+}
+
+.student-title{
+  text-align: center;
+  padding-bottom: 30px;
+  margin: 50px 330px;
+  border-bottom: solid 3px #696969;
 }
 
 .quiz {
 	text-align: center;
 	margin: 50px 250px 50px 250px;
+}
+
+.student-illust {
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  margin: 0 20px;
+  object-fit: cover;
+}
+
+.name01::after {
+  content: "由三(ユミ)先生";
+}
+
+.name02::after {
+  content: "四保(シホ)先生";
+}
+
+.name03::after {
+  content: "一(ハジメ)先生";
+}
+
+.err-image{
+  visibility: hidden;
 }
