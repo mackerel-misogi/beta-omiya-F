@@ -17,12 +17,23 @@
   </svg>
   <header class="header">
     <div class="container">
-      <div class="header__logo01"><img src="assets/images/logo02.png" alt="みんなで特別授業"></div>
+      <div class="header__logo"><img src="assets/images/logo.png" alt="チームロゴ"></div>
+      <div class="header__name">N・S高生制作サイト</div>
     </div>
   </header>
   <main class="main index-page">
+      <h1 class="main-title"><img src="assets/images/header01.png" alt="ヘッダー"></h1>
     <div id="stage">
       <div id="sectionStage1" class="stage">
+      <div class="container">
+        <div class="video">
+          <video class="video01" src="assets/images/video01.mp4" controls  muted autoplay></video>
+          <div class="chat">
+            <p>チャット欄</p>
+          </div>
+        </div>
+      </div>
+        <answer-input class=" inputAnswer" v-bind:correct="correctAnswer['stage1']['q1']" v-on:answer-input="answerInput($event, 'stage1', 1)"></answer-input>
       <div class="container">
         <div class="greeting">
           <p class="normal">こ◼︎ち縺｡縺ｯ！<br>
