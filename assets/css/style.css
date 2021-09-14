@@ -367,9 +367,14 @@ button {
 /****************
 * header
 *****************/
-.header {
+.header01 {
   background: #FFF;
   height: 400px;
+}
+
+.header02 {
+  background: #FFF;
+  height: 60px;
 }
 
 .header .container {
@@ -394,6 +399,7 @@ button {
 .header__logo {
   width: 300px;
   height: auto;
+  margin-top: 10px;
 }
 
 .header__name {
@@ -580,4 +586,25 @@ button {
 
 .err-image{
   visibility: hidden;
+}
+
+.chat{
+  display: inline-block;
+  background:#cccccc;
+  width: 330px;
+  height: 383px;
+  margin-left: 10px;
+  vertical-align: top;
+  text-align: center;
+  color:rgb(77, 77, 77)
+}
+
+.video01{
+  display: inline-block;
+  width: 680px;
+  vertical-align: top;
+}
+
+.video{
+  margin: 20px 0;
 }
