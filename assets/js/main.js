@@ -89,6 +89,14 @@
       if ( this.clear[stage] === true && stage === 'stage2' ) {
         window.location.href = 'main2.html';
       }
+     
+      if ( this.clear[stage] === true && stage === 'stage3' ) {
+        window.location.href = 'main3.html';
+      }
+
+      if ( this.clear[stage] === true && stage === 'stage4' ) {
+        window.location.href = 'final.html';
+      }
     },
     /* クリア画面「次のステージへ」ボタンをクリックした時の動作を設定します
     *  clearをfalseにしてクリア画面を非表示にします。
