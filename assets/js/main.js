@@ -87,7 +87,7 @@
       this.clear[stage] = result;
       /* ステージ遷移の入力を判定します。 */
       if ( this.clear[stage] === true && stage === 'stage2' ) {
-        window.location.href = 'main02.html';
+        window.location.href = 'main2.html';
       }
     },
     /* クリア画面「次のステージへ」ボタンをクリックした時の動作を設定します
