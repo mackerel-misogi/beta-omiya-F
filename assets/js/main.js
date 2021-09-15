@@ -8,7 +8,7 @@
  *          number：問題番号（数字） 1
  *          final ：最終ステージの場合 'final'
  *********************************************************************************************************/
-const app = Vue.createApp({
+ const app = Vue.createApp({
   data() {
     /* 初期値を設定します */
     return {
@@ -20,15 +20,19 @@ const app = Vue.createApp({
         stage1: {
           q1: 'きく',
         },
+
         stage2: {
-          q1: 'いいい',
+          q1: '4689',
           // q2: 'えええ',
           // q3: 'おおお'
         },
         stage3: {
-          q1: 'ううう',
+          q1: 'かいい',
           // q2: 'かかか',
           // q3: 'ききき',
+        },
+        stage4:{
+          q1: 'きくをそなえよう',
         }
       },
 
@@ -48,6 +52,9 @@ const app = Vue.createApp({
           false, // 3-1
           // false, // 3-2
           // false, // 3-3
+        ],
+        stage4: [
+          false,
         ]
       },
 
@@ -56,6 +63,7 @@ const app = Vue.createApp({
         stage1: false,
         stage2: false,
         stage3: false,
+        stage4: false,
       },
 
       /* 次のステージを表示するかどうか
@@ -69,7 +77,7 @@ const app = Vue.createApp({
   },
   methods: {
     /* 「送信」ボタンをクリックした場合の動作です。 */
-    answerInput(event, stage, number, final) {
+    answerInput(event, stage, number) {
       /* answerをtrueまたはfalseにします。 */
       this.answer[stage][number-1] = event;
       /* STAGEのすべての問題がtrueか調べてclearの値を変更します。*/
@@ -77,9 +85,9 @@ const app = Vue.createApp({
         return element;
       });
       this.clear[stage] = result;
-      /* 最終ステージの入力を判定します。 */
-      if ( this.clear[stage] === true && final === 'final' ) {
-        window.location.href = 'final.html';
+      /* ステージ遷移の入力を判定します。 */
+      if ( this.clear[stage] === true && stage === 'stage2' ) {
+        window.location.href = 'main02.html';
       }
     },
     /* クリア画面「次のステージへ」ボタンをクリックした時の動作を設定します
@@ -100,7 +108,7 @@ app.component('answer-input', {
     return {
       /* 送信ボタン上下に表示されるメッセージ */
       okMessage: '正解！',
-      ngMessage: '',
+      ngMessage: '答えが違うよ！',
       message: '',
       inputAnswer: '',
     }
@@ -110,7 +118,9 @@ app.component('answer-input', {
       <div class="answer">
         <input type="text" v-model="inputAnswer" placeholder="答えを入力してね">
       </div>
+      <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
       <button v-on:click="judgement(inputAnswer)">送信</button>
+      <p v-if="message === okMessage" class="err-message">{{ message }}</p>
     </div>`,
   methods: {
     judgement(answer) {
