@@ -7,8 +7,9 @@
   <title>授業用サイト │ Project N</title>
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
 </head>
-<body>
+<body class="is-slide" id="page-animate">
   <svg width="0" height="0" class="hidden">
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.47 24.94" id="arrow" class="arrow_svg">
       <title>arrow</title>
@@ -22,18 +23,7 @@
     </div>
   </header>
   <main class="main index-page">
-      <h1 class="main-title"><img src="assets/images/header01.png" alt="ヘッダー"></h1>
-    <div id="stage">
-      <div id="sectionStage1" class="stage">
-      <div class="container">
-        <div class="video">
-          <video class="video01" src="assets/images/video01.mp4" controls  muted autoplay></video>
-          <div class="chat">
-            <p>チャット欄</p>
-          </div>
-        </div>
-      </div>
-        <answer-input class=" inputAnswer" v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>
+      <h1 class="title-logo"><img src="assets/images/logo02.png" alt="ヘッダー"></h1>
       <div class="container">
         <div class="greeting">
           <p class="normal">こ◼︎ち縺｡縺ｯ！<br>
@@ -44,25 +34,50 @@
         </div>
       </div>
       <div class="container">
-        <div class="student">
-          <h1 class="student-title">先◼︎の繝ｳ</h1>
-          <div class="student-illust name01 err-image"><img src="assets/images/illust01.png" alt="生徒画像"></div>
-          <div class="student-illust name02 err-image"><img src="assets/images/illust02.png" alt="生徒画像"></div>
-          <div class="student-illust name03 err-image"><img src="assets/images/illust03.png" alt="生徒画像"></div>
+        <div class="video">
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/bSZNlBfrMBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="box">
+        <div class="tab-area">
+          <div class="tab active">
+            一枚目
+          </div>
+          <div class="tab">
+            二枚目
+          </div>
+          <div class="tab">
+            三枚目
+          </div>
+          <div class="tab">
+            四枚目
+          </div>
+          <div class="tab">
+            五枚目
+          </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="quiz">
-          <h1>まず縺壹この◼︎題を解｣縺みよう！</h1>
-          <div class="quiz-image err-image"><img src="assets/images/quiz-image01.png" alt="クイズ画像"></div>
+        <div class="quiz-area">
+          <div class="quiz show">
+            <img src="assets/images/q2-01.png">
+          </div>
+          <div class="quiz">
+            <img src="assets/images/q2-02.png">
+          </div>
+          <div class="quiz">
+            <img src="assets/images/q2-03.png">
+          </div>
+          <div class="quiz">
+            <img src="assets/images/q2-04.png">
+          </div>
+          <div class="quiz">
+            <img src="assets/images/q2-05.png">
+          </div>
         </div>
+        <p class="chat">チャット欄</p>
       </div>
-      <!-- STAGE1回答入力セクション ここから-->
-      <div class="container">
-        <answer-input class=" inputAnswer" v-bind:correct="correctAnswer['stage1']['q1']" v-on:answer-input="answerInput($event, 'stage1', 1)"></answer-input>   
+    <div id="stage">
+      <div id="sectionStage1" class="stage">
       </div>
-      <!-- STAGE1回答入力セクション ここまで-->
-      </div>
+      <answer-input class=" inputAnswer" v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1 , 'story1')"></answer-input>
     </div>
   </main>
   </div>
