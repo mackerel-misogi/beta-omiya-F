@@ -512,62 +512,23 @@ button {
 .bold{
 	font-size: 26px;
 }
-.student{
-	text-align: center;
-	margin: 40px 0 100px;
-}
-
-.student-title{
-  text-align: center;
-  padding-bottom: 30px;
-  margin: 50px 330px;
-  border-bottom: solid 3px #696969;
-}
 
 .quiz {
 	text-align: center;
 	margin: 50px 250px 50px 250px;
 }
 
-.student-illust {
-  display: inline-block;
-  height: 300px;
-  width: 300px;
-  margin: 0 20px;
-  object-fit: cover;
-}
-
-.name01::after {
-  content: "由三(ユミ)先生";
-}
-
-.name02::after {
-  content: "四保(シホ)先生";
-}
-
-.name03::after {
-  content: "一(ハジメ)先生";
-}
-
-.err-image{
-  visibility: hidden;
-}
-
 .chat{
-  display: inline-block;
-  background:#cccccc;
-  width: 330px;
-  height: 383px;
-  margin-left: 10px;
+  background:#fff;
+  border: solid 1px;
+  border-color: black;
+  width: 300px;
+  height: 340px;
+  margin-top: -405px;
+  margin-left: 550px;
   vertical-align: top;
   text-align: center;
-  color:rgb(77, 77, 77)
-}
-
-.video01{
-  display: inline-block;
-  width: 680px;
-  vertical-align: top;
+  color:rgb(77, 77, 77);
 }
 
 .video{
@@ -582,3 +543,66 @@ button {
 .character-list{
   text-align: center;
 }
+
+.title-logo{
+  margin: 0 160px;
+}
+
+.box{
+  display: inline-block;
+  margin-left: 60px;
+}
+
+.call{
+  width: 1100px;
+  padding-left: 320px;
+  padding-right: 320px;
+  padding-top: 30px;
+  margin: auto;
+}
+
+.call-page{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/********************
+* tab
+********************/
+.tab-area {
+  display: flex;
+  background-color: #8d9094;
+  cursor: pointer;
+  margin-right: 450px;
+  margin-bottom: -50px;
+}
+  .tab {
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #000;
+  }
+  .tab.active {
+    background-color: #000;
+    color: #fff;
+    border: none;
+  }
+.quiz-area {
+  font-size: 30px;
+  margin-left: -250px;
+  margin-right: 200px;
+}
+  .quiz {
+    display: none;
+  }
+  .quiz.show {
+    display: block;
+  }
