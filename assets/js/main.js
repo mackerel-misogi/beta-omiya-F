@@ -144,3 +144,14 @@ app.component('answer-input', {
 })
 
 app.mount('#stage')
+
+/* 謎画像切り替え用 */
+$(function() {
+  let tabs = $(".tab");
+  $(".tab").on("click", function() {
+    $(".active").removeClass("active");
+    $(this).addClass("active");
+    const index = tabs.index(this);
+    $(".quiz").removeClass("show").eq(index).addClass("show");
+  })
+})
