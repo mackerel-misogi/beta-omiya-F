@@ -7,33 +7,35 @@
   <title>授業用サイト │ Project N</title>
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
 </head>
-<body>
+<body class="is-slide" id="page-animate">
   <svg width="0" height="0" class="hidden">
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.47 24.94" id="arrow" class="arrow_svg">
       <title>arrow</title>
       <polygon points="0 24.94 0 19.66 7.35 12.47 0 5.92 0 0 12.47 12.47 0 24.94"/>
     </symbol>
   </svg>
-  <header class="header02">
+  <header class="header">
     <div class="container">
       <div class="header__logo"><img src="assets/images/logo.png" alt="チームロゴ"></div>
       <div class="header__name">N・S高生制作サイト</div>
     </div>
   </header>
   <main class="main index-page">
-      <h1 class="main-title"><img src="assets/images/header01.png" alt="ヘッダー"></h1>
-    <audio src="assets/images/call.mp3" autoplay>
-    </audio>
-    <div id="stage">
-      <div id="sectionStage1" class="stage">
+      <h1 class="title-logo"><img src="assets/images/logo02.png" alt="ヘッダー"></h1>
+      <div class="container">
+        <div class="greeting">
+          <p class="normal">こ◼︎ち縺｡縺ｯ！<br>
+          遘√?は◼︎◼︎蟆丞ｭｦ譬｡の生◼︎です。<br>
+          今譌･は、縺ｿんなに◼︎の繧ｵ繧､繝を◼︎った<br>
+          <p class="bold">謎解きゲーム<br></p>
+          <p class="normal">に繝√Ε繝ｬ繝ｳ繧ｸし◼︎て繧ゅｉ縺よ！</p>
+        </div>
+      </div>
       <div class="container">
         <div class="video">
-          <video class="video01" src="assets/images/video01.mp4" controls  muted autoplay></video>
-          <div class="chat">
-            <p>チャット欄</p>
-          </div>
-        </div>
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/bSZNlBfrMBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <answer-input class=" inputAnswer" v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1)"></answer-input>
       <div class="container">
@@ -46,26 +48,18 @@
         </div>
       </div>
       <div class="container">
-        <div class="student">
-          <h1 class="student-title">先◼︎の繝ｳ</h1>
-          <div class="student-illust name01 err-image"><img src="assets/images/illust01.png" alt="生徒画像"></div>
-          <div class="student-illust name02 err-image"><img src="assets/images/illust02.png" alt="生徒画像"></div>
-          <div class="student-illust name03 err-image"><img src="assets/images/illust03.png" alt="生徒画像"></div>
+        <div class="video">
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/bSZNlBfrMBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="box">
+        <div class="quiz-image2"><img src="assets/images/quiz-image2.png></div>
+        <p class="chat">チャット欄</p>
+      </div>
+      <div id="stage">
+        <div id="sectionStage1" class="stage">
+          <answer-input class=" inputAnswer" v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1 , 'story1')"></answer-input>
         </div>
       </div>
-      <div class="container">
-        <div class="quiz">
-          <h1>まず縺壹この◼︎題を解｣縺みよう！</h1>
-          <div class="quiz-image err-image"><img src="assets/images/quiz-image01.png" alt="クイズ画像"></div>
-        </div>
-      </div>
-      <!-- STAGE1回答入力セクション ここから-->
-      <div class="container">
-        <answer-input class=" inputAnswer" v-bind:correct="correctAnswer['stage1']['q1']" v-on:answer-input="answerInput($event, 'stage1', 1)"></answer-input>   
-      </div>
-      <!-- STAGE1回答入力セクション ここまで-->
-      </div>
-    </div>
   </main>
   </div>
   <footer class="footer section bg-color--gray">
