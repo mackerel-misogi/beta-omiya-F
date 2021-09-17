@@ -87,11 +87,11 @@
       this.clear[stage] = result;
       /* ステージ遷移の入力を判定します。 */
       if ( this.clear[stage] === true && stage === 'stage2' ) {
-        window.location.href = 'main3.html';
+        window.location.href = 'main2.html';
       }
      
       if ( this.clear[stage] === true && stage === 'stage3' ) {
-        window.location.href = 'main2.html';
+        window.location.href = 'main3.html';
       }
 
       if ( this.clear[stage] === true && stage === 'stage4' ) {
