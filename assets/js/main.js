@@ -22,7 +22,7 @@
         },
 
         stage2: {
-          q1: 'かいい',
+          q1: 'りかしつ',
           // q2: 'えええ',
           // q3: 'おおお'
         },
@@ -32,7 +32,10 @@
           // q3: 'ききき',
         },
         stage4:{
-          q1: 'きくをそなえよう',
+          q1: 'かいい',
+        },
+        stage5:{
+          q1: 'きくをそなえよう'
         }
       },
 
@@ -55,6 +58,9 @@
         ],
         stage4: [
           false,
+        ],
+        stage5:[
+          false,
         ]
       },
 
@@ -64,6 +70,7 @@
         stage2: false,
         stage3: false,
         stage4: false,
+        stage5: false,
       },
 
       /* 次のステージを表示するかどうか
@@ -89,12 +96,15 @@
       if ( this.clear[stage] === true && stage === 'stage2' ) {
         window.location.href = 'main2.html';
       }
-     
+
       if ( this.clear[stage] === true && stage === 'stage3' ) {
         window.location.href = 'main3.html';
       }
 
       if ( this.clear[stage] === true && stage === 'stage4' ) {
+        window.location.href = 'main4.html';
+      }
+      if ( this.clear[stage] === true && stage === 'stage5' ) {
         window.location.href = 'final.html';
       }
     },
@@ -109,8 +119,43 @@
   }
 })
 
-/* 解答入力欄のコンポーネント */
+/* 解答入力欄のコンポーネント １問目*/
 app.component('answer-input', {
+  props: ['correct'],
+  data: function () {
+    return {
+      /* 送信ボタン上下に表示されるメッセージ */
+      okMessage: '正解！',
+      ngMessage: '答えが違うよ！',
+      message: '',
+      inputAnswer: '',
+      sendMessage: '',
+    }
+  },
+  template: `
+    <div class="answer__container">
+      <div class="answer">
+        <input type="text" v-model="inputAnswer" placeholder="答えを入力してね">
+      </div>
+      <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
+      <button v-on:click="judgement(inputAnswer)">送信</button>
+    </div>`,
+  methods: {
+    judgement(answer) {
+      if(answer === this.correct) { // 入力値が解答と一致する場合
+        this.message = this.okMessage;
+        this.$emit('answerInput', true);
+      } else { // 一致しない場合
+        this.message = '';
+        this.message = this.ngMessage; 
+        this.$emit('answerInput', false);
+      }
+    },
+  }
+})
+
+/* 解答入力欄のコンポーネント 2問目以降 */
+app.component('answer-input2', {
   props: ['correct'],
   data: function () {
     return {
@@ -124,11 +169,11 @@ app.component('answer-input', {
   template: `
     <div class="answer__container">
       <div class="answer">
-        <input type="text" v-model="inputAnswer" placeholder="答えを入力してね">
+        <input type="chat" v-model="inputAnswer2" placeholder="答えを入力してね">
       </div>
       <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
-      <button v-on:click="judgement(inputAnswer)">送信</button>
       <p v-if="message === okMessage" class="err-message">{{ message }}</p>
+      <button v-on:click="judgement(inputAnswer2)">送信</button>
     </div>`,
   methods: {
     judgement(answer) {
@@ -136,6 +181,7 @@ app.component('answer-input', {
         this.message = this.okMessage;
         this.$emit('answerInput', true);
       } else { // 一致しない場合
+        this.message = '';
         this.message = this.ngMessage; 
         this.$emit('answerInput', false);
       }
@@ -145,13 +191,12 @@ app.component('answer-input', {
 
 app.mount('#stage')
 
-/* 謎画像切り替え用 */
 $(function() {
-  let tabs = $(".tab");
-  $(".tab").on("click", function() {
-    $(".active").removeClass("active");
-    $(this).addClass("active");
-    const index = tabs.index(this);
-    $(".quiz").removeClass("show").eq(index).addClass("show");
+  let tabs = $(".tab"); // tabのクラスを全て取得し、変数tabsに配列で定義
+  $(".tab").on("click", function() { // tabをクリックしたらイベント発火
+    $(".active").removeClass("active"); // activeクラスを消す
+    $(this).addClass("active"); // クリックした箇所にactiveクラスを追加
+    const index = tabs.index(this); // クリックした箇所がタブの何番目か判定し、定数indexとして定義
+    $(".quiz").removeClass("show").eq(index).addClass("show"); // showクラスを消して、contentクラスのindex番目にshowクラスを追加
   })
 })
