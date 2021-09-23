@@ -37,13 +37,15 @@
         <div class="video">
           <iframe width="640" height="360" src="https://www.youtube.com/embed/bSZNlBfrMBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+      <div class="quiz-number">
+        <h1>第一問</h1>
+      </div>
       <div class="box">
-        <div class="quiz-image2"><img src="assets/images/quiz-image2.png" alt="謎画像"></div>
-        <p class="chat">チャット欄</p>
+        <div class="quiz-image02"><img src="assets/images/quiz-image02.png" alt="謎画像"></div>
       </div>
     <div id="stage">
       <div id="sectionStage1" class="stage">
-      <answer-input class=" inputAnswer" v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>
+        <answer-input2 class=" inputAnswer2" v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input2>
       </div>
     </div>
   </main>
