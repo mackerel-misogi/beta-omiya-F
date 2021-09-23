@@ -35,7 +35,10 @@
       </div>
       <div class="container">
         <div class="video">
-          <iframe width="640" height="360" src="https://www.youtube.com/embed/xAcR2FjL4Nw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/bSZNlBfrMBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="quiz-number">
+        <h1>第二問</h1>
       </div>
       <div class="box">
         <div class="tab-area">
@@ -72,12 +75,11 @@
             <img src="assets/images/q2-05.png">
           </div>
         </div>
-        <p class="chat">チャット欄</p>
       </div>
     <div id="stage">
       <div id="sectionStage1" class="stage">
+      <answer-input2 class=" inputAnswer" v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1)"></answer-input>
       </div>
-      <answer-input class=" inputAnswer" v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1 , 'story1')"></answer-input>
     </div>
   </main>
   </div>
