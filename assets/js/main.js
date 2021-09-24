@@ -139,6 +139,10 @@ app.component('answer-input', {
       </div>
       <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
       <button v-on:click="judgement(inputAnswer)">送信</button>
+      <div class="hint-btn-container">
+        <input type="button" class="hint-btn" value="ヒント" onclick="show();"/>
+        <input type="button" class="hint-btn" value="ヒント2" onclick="show2();"/>
+      </div>
     </div>`,
   methods: {
     judgement(answer) {
@@ -173,7 +177,12 @@ app.component('answer-input2', {
       </div>
       <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
       <p v-if="message === okMessage" class="err-message">{{ message }}</p>
+      <p v-if="message === hintMessage" class="err-message">{{ message }}</p>
       <button v-on:click="judgement(inputAnswer2)">送信</button>
+      <div class="hint-btn-container">
+        <input type="button" class="hint-btn" value="ヒント" onclick="show();"/>
+        <input type="button" class="hint-btn" value="ヒント2" onclick="show2();"/>
+      </div>
     </div>`,
   methods: {
     judgement(answer) {
