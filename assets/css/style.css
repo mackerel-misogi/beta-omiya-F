@@ -731,3 +731,9 @@ button {
     margin-right: 270px;
     margin-bottom: 30px;
   }
+
+  .endcard{
+    text-align: center;
+    margin-left: 230px;
+    margin-right: 230px;
+  }
