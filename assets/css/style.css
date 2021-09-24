@@ -63,6 +63,7 @@ input[type=chat]{
   padding: 40px 125px;
   display: block;
   margin: 0 auto;
+  margin-top: 40px;
   max-width: 400px;
   width: 100%;
   border-radius: 20px;
@@ -92,7 +93,6 @@ button {
   display: block;
   border: none;
   margin: 0 auto;
-  margin-top: 60px;
   margin-bottom: 30px;
   background-color: #ffc2c2;
   color: #fff;
@@ -599,7 +599,6 @@ button {
   text-align: center;
   padding-left: 100px;
   padding-right: 100px;
-  margin-bottom: 50px;
 }
 
 
@@ -633,7 +632,6 @@ button {
 }
 
 .video{
-  margin: 20px 0;
   text-align: center;
 }
 
@@ -737,3 +735,67 @@ button {
     margin-left: 230px;
     margin-right: 230px;
   }
+
+.hint-btn-container{
+  text-align: center;
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-bottom: 30px;
+}
+
+.hint-btn{
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    text-align: center;
+    margin-top: -20px;
+    background-color: #ffffff;
+    color: #ffc2c2;
+    font-size: 25px;
+    margin: 0 10px;
+  }
+
+#hint-1{
+  display: none;
+}
+
+#hint-2{
+  display: none;
+}
+
+.hint-text{
+  position: relative;
+  display: inline-block;
+  margin: 30px 0 30px 130px;
+  padding: 7px 100px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #555;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.hint-text::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-right: 12px solid #FFF;
+  z-index: 2;
+}
+
+.hint-text::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-right: 14px solid #555;
+  z-index: 1;
+}
