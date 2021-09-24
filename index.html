@@ -58,6 +58,13 @@
       </div>
       <!-- STAGE1回答入力セクション ここから-->
       <div class="container">
+        <div id="hint-1" class="hint-text">
+          <p>上段は曜日、下段は数字の並び</p>
+        </div>
+        <div class="block"></div>
+        <div id="hint-2" class="hint-text">
+          <p>9を言いかえると...</p>
+        </div>
         <answer-input class=" inputAnswer" v-bind:correct="correctAnswer['stage1']['q1']" v-on:answer-input="answerInput($event, 'stage1', 1)"></answer-input>   
       </div>
       <!-- STAGE1回答入力セクション ここまで-->
