@@ -53,6 +53,10 @@
           <p>〇〇〇〇にちょうど当てはまる学校の教室は...</p>
         </div>
         <answer-input2 class=" inputAnswer2" v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input2>
+        <div class="hint-btn-container">
+          <input type="button" class="hint-btn" value="ヒント" onclick="show();"/>
+          <input type="button" class="hint-btn" value="ヒント2" onclick="show2();"/>
+        </div>
       </div>
     </div>
   </main>
