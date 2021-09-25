@@ -53,7 +53,7 @@
       <div class="container">
         <div class="quiz-first">
           <h1>まずはこの問題を解いてみよう！</h1>
-          <div class="quiz-image"><img src="assets/images/quiz-image01.png" alt="クイズ画像"></div>
+          <div class="quiz-image"><img class="quiz-img" src="assets/images/quiz-image01.png" alt="クイズ画像"></div>
         </div>
       </div>
       <!-- STAGE1回答入力セクション ここから-->
@@ -66,10 +66,12 @@
           <p>9を言いかえると...</p>
         </div>
         <answer-input class=" inputAnswer" v-bind:correct="correctAnswer['stage1']['q1']" v-on:answer-input="answerInput($event, 'stage1', 1)"></answer-input>
+        <div class="hint-container">
         <div class="hint-btn-container">
           <input type="button" class="hint-btn" value="ヒント" onclick="show();"/>
           <input type="button" class="hint-btn" value="ヒント2" onclick="show2();"/>
-        </div>  
+        </div>
+        </div>   
       </div>
       <!-- STAGE1回答入力セクション ここまで-->
 
