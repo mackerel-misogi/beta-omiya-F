@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>真夏の小學校からの脱出 │ Project N</title>
+  <title>授業用サイト │ Project N</title>
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/jquery-3.6.0.min.js"></script>
@@ -25,17 +25,8 @@
   <main class="main index-page">
       <h1 class="title-logo"><img src="assets/images/logo02.png" alt="ヘッダー"></h1>
       <div class="container">
-        <div class="greeting">
-          <p class="normal">こ◼︎ち縺｡縺ｯ！<br>
-          遘√?は◼︎◼︎蟆丞ｭｦ譬｡の生◼︎です。<br>
-          今譌･は、縺ｿんなに◼︎の繧ｵ繧､繝を◼︎った<br>
-          <p class="bold">謎解きゲーム<br></p>
-          <p class="normal">に繝√Ε繝ｬ繝ｳ繧ｸし◼︎て繧ゅｉ縺よ！</p>
-        </div>
-      </div>
-      <div class="container">
-        <div class="video">
-          <video src="assets/images/video02.mp4" controls autoplay muted></video>
+        <div class="video-box">
+          <video class="video" src="assets/images/video01.mp4" controls autoplay muted></video>
         </div>
       <div class="quiz-number">
         <h1>第二問</h1>
@@ -78,7 +69,53 @@
       </div>
     <div id="stage">
       <div id="sectionStage1" class="stage">
-      <answer-input2 class=" inputAnswer" v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1)"></answer-input>
+        <div id="hint-1" class="hint-text">
+          <p>漢字はそれぞれ「カン」、「ドキ」、「エン」と読むから...</p>
+        </div>
+        <div class="block"></div>
+        <div id="hint-2" class="hint-text">
+          <p>×2すると「カンカン」、「ドキドキ」、「エンエン」になって...</p>
+        </div>
+        <div id="hint-3" class="hint-text">
+          <p>赤い「り」、白い「お」、黄色い「のこ」</p>
+        </div>
+        <div class="block"></div>
+        <div id="hint-4" class="hint-text">
+          <p>あか「り」、「お」しろ...</p>
+        </div>
+        <div id="hint-5" class="hint-text">
+          <p>1進んで、2進んで、×1して、1進んで、2進んで、×2して...</p>
+        </div>
+        <div class="block"></div>
+        <div id="hint-6" class="hint-text">
+          <p>54×4は...</p>
+        </div>
+        <div id="hint-7" class="hint-text">
+          <p>エレベーターでは地下のボタンはアルファベットで…</p>
+        </div>
+        <div class="block"></div>
+        <div id="hint-8" class="hint-text">
+          <p>アルファベットのFは何番目？</p>
+        </div>
+      <answer-input2 class=" inputAnswer" v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1)"></answer-input2>
+      <div class="hint-container">
+      <div class="hint-btn-container">
+        <p>二枚目</p>
+        <input type="button" class="hint-btn" value="ヒント" onclick="show();"/>
+        <input type="button" class="hint-btn" value="ヒント2" onclick="show2();"/>
+        <p>四枚目</p>
+        <input type="button" class="hint-btn" value="ヒント" onclick="show5();"/>
+        <input type="button" class="hint-btn" value="ヒント2" onclick="show6();"/>
+      </div>
+      <div class="hint-btn-container2">
+        <p>三枚目</p>
+        <input type="button" class="hint-btn" value="ヒント" onclick="show3();"/>
+        <input type="button" class="hint-btn" value="ヒント2" onclick="show4();"/>
+        <p>五枚目</p>
+        <input type="button" class="hint-btn" value="ヒント" onclick="show7();"/>
+        <input type="button" class="hint-btn" value="ヒント2" onclick="show8();"/>
+      </div>
+      </div>
       </div>
     </div>
   </main>
@@ -91,5 +128,6 @@
   </footer>
   <script src="https://unpkg.com/vue@next"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/hint.js"></script>
 </body>
 </html>
