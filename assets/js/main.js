@@ -19,23 +19,29 @@
       correctAnswer: {
         stage1: {
           q1: 'きく',
+          q1: '菊',
+          q1: 'キク',
         },
 
         stage2: {
           q1: 'りかしつ',
-          // q2: 'えええ',
-          // q3: 'おおお'
+          q1: '理科室',
+          q1: '理科しつ',
+          q1: 'リカシツ',
         },
         stage3: {
           q1: '0806',
-          // q2: 'かかか',
-          // q3: 'ききき',
         },
         stage4:{
           q1: 'かいい',
+          q1: '怪異',
+          q1: 'カイイ',
         },
         stage5:{
-          q1: 'きくをそなえよう'
+          q1: 'きくをそなえよう',
+          q1: '菊をそなえよう',
+          q1: '菊を供えよう',
+          q1: 'きくを供えよう',
         }
       },
 
@@ -160,26 +166,25 @@ app.component('answer-input2', {
   data: function () {
     return {
       /* 送信ボタン上下に表示されるメッセージ */
-      okMessage: '正解！',
+      okMessage: '答えが違うよ！',
       ngMessage: '答えが違うよ！',
       message: '',
       inputAnswer: '',
+      hintMessage:'ヒント',
+      hintMessage2:'これがヒント',
     }
   },
   template: `
+    <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
     <div class="answer__container">
       <div class="answer">
         <input type="chat" v-model="inputAnswer2" placeholder="答えを入力してね">
       </div>
-      <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
-      <p v-if="message === okMessage" class="err-message">{{ message }}</p>
-      <p v-if="message === hintMessage" class="err-message">{{ message }}</p>
       <button v-on:click="judgement(inputAnswer2)">送信</button>
     </div>`,
   methods: {
     judgement(answer) {
       if(answer === this.correct) { // 入力値が解答と一致する場合
-        this.message = this.okMessage;
         this.$emit('answerInput', true);
       } else { // 一致しない場合
         this.message = '';
