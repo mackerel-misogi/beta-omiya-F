@@ -56,6 +56,7 @@ input[type=text]{
   max-width: 400px;
   width: 100%;
   border-radius: 10px;
+  border: solid 2px black;
 }
 
 input[type=chat]{
@@ -67,8 +68,8 @@ input[type=chat]{
   max-width: 400px;
   width: 100%;
   border-radius: 20px;
-  background-color: #f2ffe2;
-  border: solid 0.5px black;
+  background-color: #f8fff0;
+  border: solid 2px black;
 }
 
 
@@ -435,22 +436,6 @@ button {
   word-spacing: 20px;
 }
 
-.err-message {
-  color: #3f3f3f;
-  font-size: 17px;
-  text-align: center;
-}
-
-
-.send-message {
-  color: #3f3f3f;
-  font-size: 17px;
-  float: right;
-  margin-right: 5px;
-  line-height: 1.3em;
-}
-
-
 .link-hint {
   text-align: center;
   display: block;
@@ -588,11 +573,15 @@ button {
 
 .quiz-first {
   text-align: center;
+  display: block;
   margin-top: 100px;
 }
 
 .quiz-image{
-  margin: 0 250px 50px 250px;
+  text-align: center;
+}
+.quiz-img{
+  width: 60vw;
 }
 
 .quiz-image02{
@@ -613,7 +602,6 @@ button {
   text-align: center;
   padding-left: 200px;
   padding-right: 200px;
-  margin-bottom: 50px;
 }
 
 .quiz-image05-1{
@@ -632,6 +620,9 @@ button {
 }
 
 .video{
+  width: 75vw;
+}
+.video-box{
   text-align: center;
 }
 
@@ -713,7 +704,7 @@ button {
     padding-bottom: 50px;
     font-size: 30px;
     border-radius: 50px;
-    border:solid 1px black;
+    border:solid 2px black;
   }
 
   .final-message{
@@ -724,10 +715,10 @@ button {
   .final{
     text-align: center;
     border: solid 1px black;
-    padding-bottom: 300px;
-    margin-left: 270px;
-    margin-right: 270px;
-    margin-bottom: 30px;
+    padding-bottom: 10px;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 10px;
   }
 
   .endcard{
@@ -736,11 +727,18 @@ button {
     margin-right: 230px;
   }
 
+.hint-container{
+  text-align: center;
+}
+
 .hint-btn-container{
   text-align: center;
-  margin-right: 200px;
-  margin-left: 200px;
-  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.hint-btn-container2{
+  display: inline-block;
+  text-align: center;
 }
 
 .hint-btn{
@@ -758,8 +756,25 @@ button {
 #hint-1{
   display: none;
 }
-
 #hint-2{
+  display: none;
+}
+#hint-3{
+  display: none;
+}
+#hint-4{
+  display: none;
+}
+#hint-5{
+  display: none;
+}
+#hint-6{
+  display: none;
+}
+#hint-7{
+  display: none;
+}
+#hint-8{
   display: none;
 }
 
@@ -790,6 +805,43 @@ button {
 }
 
 .hint-text::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-right: 14px solid #555;
+  z-index: 1;
+}
+
+.err-message {
+  position: relative;
+  display: inline-block;
+  margin: 30px 0 30px 130px;
+  padding: 7px 100px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #555;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.err-message::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-right: 12px solid #FFF;
+  z-index: 2;
+}
+
+.err-message::after{
   content: "";
   position: absolute;
   top: 50%;
