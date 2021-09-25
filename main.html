@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>真夏の小學校からの脱出 │ Project N</title>
+  <title>授業用サイト │ Project N</title>
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/jquery-3.6.0.min.js"></script>
@@ -34,14 +34,14 @@
         </div>
       </div>
       <div class="container">
-        <div class="video">
-          <video src="assets/images/video01.mp4" controls autoplay muted></video>
+        <div class="video-box">
+          <video class="video" src="assets/images/video01.mp4" controls autoplay muted></video>
         </div>
       <div class="quiz-number">
         <h1>第一問</h1>
       </div>
       <div class="box">
-        <div class="quiz-image02"><img src="assets/images/quiz-image02.png" alt="謎画像"></div>
+        <div class="quiz-image02"><img class="quiz-img" src="assets/images/quiz-image02.png" alt="謎画像"></div>
       </div>
     <div id="stage">
       <div id="sectionStage1" class="stage">
@@ -52,10 +52,12 @@
         <div id="hint-2" class="hint-text">
           <p>〇〇〇〇にちょうど当てはまる学校の教室は...</p>
         </div>
-        <answer-input2 class=" inputAnswer2" v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input2>
+        <answer-input2 class="inputAnswer2" v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input2>
+        <div class="hint-container">
         <div class="hint-btn-container">
           <input type="button" class="hint-btn" value="ヒント" onclick="show();"/>
           <input type="button" class="hint-btn" value="ヒント2" onclick="show2();"/>
+        </div>
         </div>
       </div>
     </div>
@@ -69,5 +71,6 @@
   </footer>
   <script src="https://unpkg.com/vue@next"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/hint.js"></script>
 </body>
 </html>
