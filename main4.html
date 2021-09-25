@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>真夏の小學校からの脱出 │ Project N</title>
+  <title>授業用サイト │ Project N</title>
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -52,8 +52,8 @@
         </div>
         <div class="container">
           <div class="video">
-            <video src="assets/images/video04.mp4" controls autoplay muted></video>
-          </div>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/bSZNlBfrMBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="quiz-number">
           <h1>さいごのもんだい</h1>
         </div>
@@ -63,7 +63,33 @@
         </div>
       <div id="stage">
         <div id="sectionStage1" class="stage">
+          <div id="hint-1" class="hint-text">
+            <p>今までの問題をふりかえろう</p>
+          </div>
+          <div class="block"></div>
+          <div id="hint-2" class="hint-text">
+            <p>過去の問題の選択肢を対応する空欄に入れられないだろうか…？</p>
+          </div>
+          <div id="hint-3" class="hint-text">
+            <p>黒い部分には同じ文字が入るよ</p>
+          </div>
+          <div class="block"></div>
+          <div id="hint-4" class="hint-text">
+            <p>□□にはきくが入るよ</p>
+          </div>
           <answer-input2 class=" inputAnswer2" v-bind:correct="correctAnswer['stage5']['q1']" v-on:answer-input="answerInput($event, 'stage5', 1)"></answer-input2>
+          <div class="hint-container">
+            <div class="hint-btn-container">
+              <p>一枚目</p>
+              <input type="button" class="hint-btn" value="ヒント" onclick="show();"/>
+              <input type="button" class="hint-btn" value="ヒント2" onclick="show2();"/>
+            </div>
+            <div class="hint-btn-container2">
+              <p>二枚目</p>
+              <input type="button" class="hint-btn" value="ヒント" onclick="show3();"/>
+              <input type="button" class="hint-btn" value="ヒント2" onclick="show4();"/>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -76,5 +102,6 @@
     </footer>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/hint.js"></script>
   </body>
   </html>
