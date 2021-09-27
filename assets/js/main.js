@@ -129,12 +129,12 @@ app.component('answer-input', {
     }
   },
   template: `
+    <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
     <div class="answer__container">
       <div class="answer">
-        <input type="text" v-model="inputAnswer" placeholder="答えを入力してね">
+        <input type="chat" v-model="inputAnswer2" placeholder="答えを入力してね">
       </div>
-      <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
-      <button v-on:click="judgement(inputAnswer)">送信</button>
+      <button v-on:click="judgement(inputAnswer2)">送信</button>
     </div>`,
   methods: {
     judgement(answer) {
